@@ -57,14 +57,19 @@ function setActiveButton() {
 function showCategory(category){
     var x, i;
     x = document.getElementsByClassName("category");
-    if (category == "all") category = "";
+    if (category === "all") category = "";
     for (i = 0; i < x.length; i++) {
         hide(x[i]);
         //Searches the classname for the mentioned category.
         if (x[i].className.indexOf(category > -1)) show(x[i]);
     }
 }
-
+function hide(element){
+    element.style.display = "none";
+}
+function show(element){
+    element.removeProperty("display");
+}
 
 
 
