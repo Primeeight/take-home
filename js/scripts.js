@@ -5,6 +5,7 @@
 // Fetch products from the API and display them on the page
 document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
+    setActiveButton();
 });
 
 // Fetch products from the API
@@ -40,4 +41,30 @@ function createProductElement(product) {
     `;
     return productElement;
 }
+// Set the current button as active.
+function setActiveButton() {
+    var container = document.getElementByID("CategoryButtons");
+    var buttons = container.getElementsByClassName("btn");
+    for(var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+}
+
+function showCategory(category){
+    var x, i;
+    x = document.getElementsByClassName("category");
+    if (category == "all") category = "";
+    for (i = 0; i < x.length; i++) {
+        hide(x[i]);
+        //Searches the classname for the mentioned category.
+        if (x[i].className.indexOf(category > -1)) show(x[i]);
+    }
+}
+
+
+
 
