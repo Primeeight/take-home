@@ -36,6 +36,7 @@ function createProductElement(product) {
     productElement.innerHTML = `
         <img src="${product.image}" alt="${product.title}" class="product-image">
         <h2 class="title">${product.title}</h2>
+        <h2 class = "category">${product.category}</h2>
         <p class="price">$${product.price}</p>
         <div></div>
     `;
@@ -55,20 +56,21 @@ function setActiveButton() {
 }
 
 function showCategory(category){
-    var x, i;
-    x = document.getElementsByClassName("category");
+    var x, y, i;
+    x = document.getElementsByClassName("product");
     if (category === "all") category = "";
     for (i = 0; i < x.length; i++) {
         hide(x[i]);
         //Searches the classname for the mentioned category.
-        if (x[i].className.indexOf(category > -1)) show(x[i]);
+        if (x[i].innerHTML.includes(category)) show(x[i]);
     }
 }
 function hide(element){
+    this
     element.style.display = "none";
 }
 function show(element){
-    element.removeProperty("display");
+    element.style.display = "block";
 }
 
 

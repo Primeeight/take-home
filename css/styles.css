@@ -133,3 +133,6 @@ header .search{
     border-radius: 100px;
     cursor: pointer;
 }
+.category{
+    display: none;
+}
