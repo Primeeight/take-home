@@ -14,7 +14,6 @@ function fetchProducts() {
         .then(response => response.json())
         .then(data => {
             displayProducts(data);
-            displayCategories(getAllCategories(data));
         })
         .catch(error => console.error('Error fetching products:', error));
 }
@@ -33,6 +32,7 @@ function displayProducts(products) {
 function createProductElement(product) {
     const productElement = document.createElement('article');
     productElement.classList.add('product');
+    //Add parameters such as category during product creation.
     productElement.innerHTML = `
         <img src="${product.image}" alt="${product.title}" class="product-image">
         <h2 class="title">${product.title}</h2>
@@ -42,9 +42,9 @@ function createProductElement(product) {
     `;
     return productElement;
 }
-// Set the current button as active.
+// Set the current category button as active.
 function setActiveButton() {
-    var container = document.getElementByID("CategoryButtons");
+    var container = document.getElementById("CategoryButtons");
     var buttons = container.getElementsByClassName("btn");
     for(var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
@@ -56,12 +56,13 @@ function setActiveButton() {
 }
 
 function showCategory(category){
-    var x, y, i;
+    var x, i;
     x = document.getElementsByClassName("product");
-    if (category === "all") category = "";
+    if (category === " all") category = "";
     for (i = 0; i < x.length; i++) {
         hide(x[i]);
         //Searches the classname for the mentioned category.
+        if (x[i].innerHTML.includes(category)) console.log(x[i].innerHTML);
         if (x[i].innerHTML.includes(category)) show(x[i]);
     }
 }
