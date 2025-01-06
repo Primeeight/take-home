@@ -25,6 +25,16 @@ header {
     align-items: center;
     flex-wrap: wrap;
 }
+.btn{
+    flex-direction: row;
+    background-color: transparent;
+    gap: 1em;
+    align-items: center;
+    border-radius: 100px;
+    min-width: 3rem;
+    position: relative;
+    top: 0;
+}
 
 header h1 {
     font-size: 2em;
@@ -51,6 +61,7 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
 
 main {
     width: 80%;
@@ -133,6 +144,7 @@ header .search{
     border-radius: 100px;
     cursor: pointer;
 }
+
 .category{
     display: none;
 }
