@@ -26,15 +26,22 @@ header {
     flex-wrap: wrap;
 }
 .btn{
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
     background-color: transparent;
     gap: 1em;
-    align-items: center;
     border-radius: 100px;
     min-width: 3rem;
-    position: relative;
-    top: 0;
+
 }
+.btn:hover{
+    cursor: pointer;
+    border-color:black;
+    background-color: black;
+    color: white;
+}
+
 
 header h1 {
     font-size: 2em;
