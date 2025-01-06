@@ -11,6 +11,13 @@
 <body>
     <header>
         <h1>Shop</h1>
+        <div id="CategoryButtons">
+            <button class="btn active" onclick="showCategory('all')">all</button>
+            <button class="btn" onclick="showCategory('men\'s clothing')">men's clothing</button>
+            <button class="btn" onclick="showCategory('jewelery')">jewelery</button>
+            <button class="btn" onclick="showCategory('electronics')">electronics</button>
+            <button class="btn" onclick="showCategory('women\'s clothing')">women's clothing</button>
+        </div>
         <div class="search">
             <input type="text" placeholder="Search">
             <button>
@@ -21,15 +28,6 @@
                         fill="#313131" />
                 </svg>
             </button>
-        </div>
-    </header>
-    <header>
-        <div id="CategoryButtons">
-            <button class="btn active" onclick="showCategory('all')">all</button>
-            <button class="btn" onclick="showCategory('men\'s clothing')">men's clothing</button>
-            <button class="btn" onclick="showCategory('jewelery')">jewelery</button>
-            <button class="btn" onclick="showCategory('electronics')">electronics</button>
-            <button class="btn" onclick="showCategory('women\'s clothing')">women's clothing</button>
         </div>
     </header>
     <main>

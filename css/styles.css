@@ -26,6 +26,7 @@ header {
     flex-wrap: wrap;
 }
 .btn{
+    font-size: 1em;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
