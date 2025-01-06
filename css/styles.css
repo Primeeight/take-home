@@ -25,6 +25,23 @@ header {
     align-items: center;
     flex-wrap: wrap;
 }
+.btn{
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: transparent;
+    gap: 1em;
+    border-radius: 100px;
+    min-width: 3rem;
+
+}
+.btn:hover{
+    cursor: pointer;
+    border-color:black;
+    background-color: black;
+    color: white;
+}
+
 
 header h1 {
     font-size: 2em;
@@ -51,6 +68,7 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
 
 main {
     width: 80%;
@@ -133,6 +151,7 @@ header .search{
     border-radius: 100px;
     cursor: pointer;
 }
+
 .category{
     display: none;
 }
