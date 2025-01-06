@@ -44,11 +44,11 @@ function createProductElement(product) {
 }
 // Set the current category button as active.
 function setActiveButton() {
-    var container = document.getElementById("CategoryButtons");
-    var buttons = container.getElementsByClassName("btn");
-    for(var i = 0; i < buttons.length; i++) {
+    let container = document.getElementById("CategoryButtons");
+    let buttons = container.getElementsByClassName("btn");
+    for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
-            var current = document.getElementsByClassName("active");
+            let current = document.getElementsByClassName("active");
             current[0].className = current[0].className.replace(" active", "");
             this.className += " active";
         });
@@ -56,7 +56,7 @@ function setActiveButton() {
 }
 
 function showCategory(category){
-    var x, i;
+    let x, i;
     x = document.getElementsByClassName("product");
     if (category === " all") category = "";
     for (i = 0; i < x.length; i++) {
@@ -67,7 +67,6 @@ function showCategory(category){
     }
 }
 function hide(element){
-    this
     element.style.display = "none";
 }
 function show(element){

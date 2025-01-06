@@ -17,8 +17,7 @@ body {
 header {
     color: black;
     padding: 2em 1em;
-    margin: auto;
-    margin-bottom: 10em;
+    margin: auto auto 10em;
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
